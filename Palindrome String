@@ -1,0 +1,25 @@
+//User function Template for C
+#include<string.h>
+int isPalindrome(char S[])
+{
+    // Your code goes here
+    	 int flag=0,i;
+         int len=strlen(S);
+         for(i=0; i<len/2; i++)
+         {
+         	if(S[i]!=S[len-i-1])
+         {
+         	flag=1;
+         	break;
+         }
+         }
+
+        if(flag==0)
+         {
+         	return 1;
+         }
+         else
+         {
+         	return 0;
+         }
+}
