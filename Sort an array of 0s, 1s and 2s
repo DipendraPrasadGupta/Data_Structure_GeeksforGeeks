@@ -1,0 +1,39 @@
+//User function Template for C
+
+int Get_max(int a[], int n)
+{
+    int maxi=0;
+    for(int i=0; i<n; i++)
+    {
+        if(a[i]>maxi)
+        {
+            maxi=a[i];
+        }
+    }
+    return maxi;
+}
+void sort012(int a[], int n)
+{
+    int maxi=Get_max(a,n);
+    maxi++;
+    int frq[100]={0};
+    for(int i=0; i<n; i++)
+    {
+        frq[a[i]]++;
+    }
+    for(int i=1; i<100; i++)
+    {
+        frq[i]=frq[i]+frq[i-1];
+    }
+    int b[n];
+    for(int i=n-1; i>=0; i--)
+    {
+        frq[a[i]]--;
+        b[frq[a[i]]]=a[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        a[i]=b[i];
+    }
+
+}
