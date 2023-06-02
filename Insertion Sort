@@ -1,0 +1,40 @@
+
+
+/* The task is to complete insert() which is used 
+   as shown below to implement insertionSort() */
+
+
+    void insert(int arr[], int i)
+    {
+        // Your code here  
+    }
+    //Function to sort the array using insertion sort algorithm.
+    void insertionSort(int arr[], int n)
+    {
+        //code here
+        int i,j;
+    	int temp;
+        for(i=1; i<n; i++)//4 5 3 1 2
+        {
+ 	        temp=arr[i];//3
+	        for(j=i-1; j>=0; j--)//j = 1
+	        {
+	            if(arr[j]<temp)// 5 < 3 true
+	            {
+		            arr[j+1]=temp;//5
+		            break;
+	            }
+	            else
+	            {
+		            arr[j+1]=arr[j];
+	            }
+            }
+            if(j==-1)
+	        {
+		        arr[0]=temp;
+        	}
+        }
+	    
+    }
+
+
