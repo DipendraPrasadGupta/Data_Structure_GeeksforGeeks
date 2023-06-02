@@ -1,0 +1,21 @@
+
+void selectionSort(int arr[], int n)
+{
+  //code here
+       int i,j;
+       for( i=0; i<n; i++)
+       {
+           int ind=i;
+           for(j=i; j<n; j++)//0
+           {
+               if(arr[ind]>arr[j])
+               {
+                   ind=j;
+               }
+           }
+         int temp=arr[i];
+         arr[i]=arr[ind];
+         arr[ind]=temp;
+       }
+    
+}
