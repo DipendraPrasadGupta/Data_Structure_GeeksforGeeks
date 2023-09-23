@@ -1,0 +1,39 @@
+class Solution{
+    public:
+    // Function to find equilibrium point in the array.
+    // a: input array
+    // n: size of array
+    int equilibriumPoint(long long a[], int n) {
+        
+        int i=0;
+        int j=n-1;
+        long long leftsum=a[0];
+        long long rightsum=a[n-1];
+        while(i!=j and i<j)
+        {
+            
+            if(leftsum>rightsum)
+            {
+                j--;
+                rightsum+=a[j];
+            }
+            else if(leftsum<rightsum)
+            {
+                i++;
+                leftsum+=a[i];
+            }
+            else if(leftsum==rightsum)
+            {
+                i++;
+                j--;
+                leftsum+=a[i];
+                rightsum+=a[j];
+            }
+
+        }
+        if(i==j and leftsum==rightsum) return i+1;
+        return -1;
+        
+    }
+
+};
