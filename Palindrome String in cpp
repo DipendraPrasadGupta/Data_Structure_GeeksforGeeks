@@ -1,0 +1,57 @@
+//{ Driver Code Starts
+ 
+#include <bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+//User function template for C++
+class Solution{
+public:	
+	
+	
+	int isPalindrome(string S)
+	{
+	   // int f=0;
+    //     int l=S.length()-1;
+    //     while(f<=l)
+    //     {
+    //         if(S[f]!=S[l])
+    //         return 0;
+    //         f++;
+    //         l--;
+    //     }
+    //     return 1;
+    
+    //  OR 
+     
+        string a=S;
+        reverse(S.begin(),S.end());
+        return a==S;
+	}
+
+};
+
+//{ Driver Code Starts.
+
+int main() 
+{
+   	ios_base::sync_with_stdio(0);
+    cin.tie(NULL);
+    cout.tie(NULL);
+   
+   	int t;
+   	cin >> t;
+   	while(t--)
+   	{
+   		string s;
+   		cin >> s;
+
+   	    Solution ob;
+
+   		cout << ob.isPalindrome(s) << "\n";
+   	}
+
+    return 0;
+}
+// } Driver Code Ends
