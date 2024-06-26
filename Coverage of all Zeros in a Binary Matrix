@@ -1,0 +1,19 @@
+int i,j,sum=0,n=matrix.length, m= matrix[0].length;
+        for(i=0;i<n;i++) //step 1
+        {
+            for(j=0;j<m;j++)
+            {
+                if(matrix[i][j]==0) //step 2
+                {
+                    if(i-1>=0) //checking if top is in range
+                    sum+=matrix[i-1][j];
+                    if(j-1>=0) //checking if left is in range
+                    sum+=matrix[i][j-1];
+                    if(i+1<n) //checking if bottom is in range
+                    sum+=matrix[i+1][j];
+                    if(j+1<m) //checking if right is in range
+                    sum+=matrix[i][j+1];
+                }
+            }
+        }
+        return sum; //step 3
