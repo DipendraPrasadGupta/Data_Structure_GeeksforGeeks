@@ -1,0 +1,10 @@
+  if(head1 == nullptr && head2 != nullptr){
+        return false;
+    }
+    else if(head1 != nullptr && head2 == nullptr){
+        return false;
+    }
+    else if(head1 == nullptr && head2 == nullptr){
+        return true;
+    }
+    return head1->data == head2->data && areIdentical(head1->next,head2->next);
